@@ -15,6 +15,13 @@
     "--talk-name=com.system76.CosmicSettingsDaemon",
     "--filesystem=xdg-config/cosmic:ro"
   ],
+  "cleanup-commands": [
+    "/app/cleanup-BaseApp.sh",
+    "rm -rf /app/share/icons/Pop/cursors",
+    "rm -rf /app/share/icons/Pop/{8x8,16x16,24x24,32x32,48x48,64x64,128x128,256x256,512x512}",
+    "rm -rf /app/share/icons/Pop/scalable/{apps,categories,devices,emblems,emotes,mimetypes,places,status}",
+    "rm -rf /app/share/icons/Cosmic/scalable/{apps,categories,devices,emblems,mimetypes,places}"
+  ],
   "build-options": {
     "append-path": "/usr/lib/sdk/rust-stable/bin"
   },
@@ -39,7 +46,7 @@
         {
           "type": "git",
           "url": "https://codeberg.org/Friedrich/dnd-dice-roller.git",
-          "tag": "v0.2.1.1"
+          "tag": "v0.2.2.1"
         },
         "cargo-sources.json"
       ]
